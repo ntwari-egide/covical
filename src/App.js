@@ -46,9 +46,15 @@ function App() {
     'Access-Control-Allow-Origin': '*'
   }
 
-  const [allcontinentsdata,setallcontinentsdata] = useState()
+  const [allcontinentsdata,setallcontinentsdata] = useState([])
 
   const [allcountriesdata,setallcountriesdata] = useState([])
+
+  const [selecteddate,setselecteddate] = useState("")
+
+  const [datenotselected,setdatenotselected] = useState(true)
+
+  const [selectedcountry,setselectedcountry] = useState("")
 
   const [selectedcountrydata,setselectedcountrydata] = useState({})
 
@@ -73,29 +79,6 @@ function App() {
         })
   },[])
 
-
-  const services = [
-    {
-        title: 'Case Management',
-        description: "Yombi help you to add and assign cases, level of completion of case,working on the assigned cases,graphic visualization of level."
-  
-    },
-    {
-        title: 'Daily Task Management',
-        description: " With Yombi you can organize your daily work clearly to minimize time wastage. Yombi helps to add and complete daily todos list corresponding comment after completetion"
-    },
-    {
-        title: 'Messaging service',
-        description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
-    },
-    {
-      title: 'Messaging service',
-      description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
-  },
-  {
-    title: 'Messaging service',
-    description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
-}]
 
   const responsive = {
       superLargeDesktop: {
@@ -129,11 +112,33 @@ function App() {
   };
 
 
-  const getselectedcountrychange = async (selectedOption )  => {
-    await axios.get(`https://corona.lmao.ninja/v2/countries/${selectedOption.value}?yesterday&strict&query%20`,headers)
-    .then(response => {
-      setselectedcountrydata(response.data)
-    })
+  const getselectedcountrychange = (selectedOption )  => {
+    setselectedcountry(selectedOption.value)
+  }
+
+  const handledatechange = (e) => {
+    setselecteddate(e.target.value)
+  }
+
+  const handleformsubmission = async (e) => {
+    e.preventDefault()
+
+    /* validating forms */
+    
+    console.log("date: ",selecteddate);
+
+    if(selecteddate === "") {
+      alert("date is not choosen")
+    }
+    else if(selecteddate !== ""){
+      setdatenotselected(false)
+    }
+    else{
+      await axios.get(`https://corona.lmao.ninja/v2/countries/${selectedcountry}?${selecteddate}&strict&query%20`,headers)
+      .then(response => {
+        setselectedcountrydata(response.data)
+      })
+    }
   }
 
 
@@ -158,9 +163,13 @@ function App() {
             onChange = {getselectedcountrychange}
             />
 
-            <input type="date" className="choose-date" />
+            {datenotselected ? 
+            <input type="date" className="choose-date" style={{border: '1px solid red'}} onChange={handledatechange} />
+            :
+            <input type="date" className="choose-date" onChange={handledatechange} />
+            }
             
-            <button>SUBMIT</button>
+            <button onClick={handleformsubmission}>SUBMIT</button>
           </div>
 
           <div className="mt-12">
@@ -217,25 +226,25 @@ function App() {
               keyBoardControl={true}
               draggable={true}
               swipeable = {true}>
-                  {services.map((services)=>
+                  {allcontinentsdata.map((continentdata) =>
                     <div className="rounded-md ml-12 continent-container">
                     <div className="grid grid-cols-2">
                         <div className="left-part p-2">
-                          <h1 className="text-center font-bold mt-6">AFRICA</h1>
-                          <h2 className="text-center mt-14">12,600</h2>
+                          <h1 className="text-center font-bold mt-6">{continentdata.continent}</h1>
+                          <h2 className="text-center mt-14">{continentdata.todayCases}</h2>
                           <h3 className="text-center">New cases</h3>
-                          <h4 className="text-center mt-24">All cases: 23,000,900</h4>
+                          <h4 className="text-center mt-24">All cases: {continentdata.cases}</h4>
                         </div>
                         <div className="right-part">
                           <div>
-                            <h1 className="text-center mt-4">619</h1>
+                            <h1 className="text-center mt-4">{continentdata.todayDeaths}</h1>
                             <h4 className="text-center">New deaths</h4>
-                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                            <h2 className="text-center mt-4">Total deaths: {continentdata.deaths}0</h2>
                           </div>
                           <div>
-                            <h1 className="text-center mt-4">23,200</h1>
+                            <h1 className="text-center mt-4">{continentdata.critical}</h1>
                             <h4 className="text-center">Newly recovered</h4>
-                            <h2 className="text-center mt-4">Total recovered: 20,300</h2>
+                            <h2 className="text-center mt-4">Total recovered: {continentdata.recovered}</h2>
                           </div>
                           <div>
                             <h1 className="text-center mt-4">50,009</h1>
@@ -275,7 +284,7 @@ function App() {
 
                   <h2 className="text-center mt-8 font-bold">Profile</h2>
                   <p> <a className="text-center font-bold" href="https://www.linkedin.com/in/ntwari-egide-93b53218a/">ntwari egide,linked in profile</a> </p>
-                  <p> <a className="text-center font-bold" href="https://www.linkedin.com/in/ntwari-egide-93b53218a/">ntwari egide,my cv</a> </p>
+                  <p> <a className="text-center font-bold" href="https://docs.google.com/document/d/1pp_HSpSiOKsbRZRGuCCL46kdKHd4mbwLFkCDIYbaBu4/edit?usp=sharing">ntwari egide,my cv</a> </p>
                   
               </div>
       </div>
