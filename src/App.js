@@ -48,17 +48,19 @@ function App() {
 
   const [allcontinentsdata,setallcontinentsdata] = useState()
 
-  const [allcountritesdata,setallcountritesdata] = useState([])
+  const [allcountrydata,setallcountrydata] = useState([])
 
-  useEffect( async ()=>{
-      await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
-      .then( response => {
-          setallcountritesdata(response.data)
+  useEffect( ()=>{
+      async function fetchdata() {
+        await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
+        .then( response => {
+            setallcountritesdata(response.data)
 
-          response.data.map(countrydata => {
-            options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
-          })
-      })
+            response.data.map(countrydata => {
+              options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
+            })
+        })
+      }
   },[])
 
 
@@ -117,8 +119,11 @@ function App() {
   };
 
 
-  const getSelectedCaseIdChange = async (selectedOption )  => {
-    console.log("data: ",selectedOption.value);  
+  const getselectedcountrychange = async (selectedOption )  => {
+    await axios.get(`https://corona.lmao.ninja/v2/countries/Italy?yesterday&strict&query%20`,headers)
+    .then(response => {
+      setallcountrydata(response.data)
+    })
   }
   return (
     <div className="App">
@@ -138,6 +143,7 @@ function App() {
             options={options}
             components={{ Option: IconOption }} 
             styles = {colourStyles}
+            onChange = {getselectedcountrychange}
             />
 
             <input type="date" className="choose-date" />
