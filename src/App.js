@@ -177,8 +177,27 @@ function App() {
                     <div className="rounded-md ml-12 continent-container">
                     <div className="grid grid-cols-2">
                         <div className="left-part p-2">
+                          <h1 className="text-center font-bold mt-6">AFRICA</h1>
+                          <h2 className="text-center mt-14">12,600</h2>
+                          <h3 className="text-center">New cases</h3>
+                          <h4 className="text-center mt-24">All cases: 23,000,900</h4>
                         </div>
-                        <div className="right-part p-2">
+                        <div className="right-part">
+                          <div>
+                            <h1 className="text-center mt-4">619</h1>
+                            <h4 className="text-center">New deaths</h4>
+                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                          </div>
+                          <div>
+                            <h1 className="text-center mt-4">619</h1>
+                            <h4 className="text-center">New deaths</h4>
+                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                          </div>
+                          <div>
+                            <h1 className="text-center mt-4">619</h1>
+                            <h4 className="text-center">New deaths</h4>
+                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                          </div>
                         </div>                      
                     </div>                                     
                   </div>

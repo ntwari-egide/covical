@@ -118,7 +118,7 @@
 
 .continent-container .right-part{
   background-color: #2FC8B8;
-  height: 44vh;
+  /* height: 44vh; */
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -126,4 +126,61 @@
 .continent-container .left-part{
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+}
+
+.continent-container .left-part h1{
+  font-family: 'Bebas Neue';
+  font-size: 23px;
+}
+
+.continent-container .left-part h2{
+  color: #2FC8B8;
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.continent-container .left-part h3{
+  font-weight: 700;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+.continent-container .left-part h4{
+  font-weight: 200;
+  font-family: 'Roboto';
+  font-size: 13px;
+  color: #888888;
+}
+
+.continent-container .right-part h1{
+  font-family: 'Roboto';
+    font-size: 21px;
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.continent-container .right-part h4{
+  font-size: 9px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: black;
+}
+
+.continent-container .right-part h2{
+  text-align: center;
+    font-size: 10px;
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-weight: 100;
+}
+
+.continent-container .right-part div{
+  padding-bottom: 23px;
+}
+
+.continent-container .right-part div:first-child,
+.continent-container .right-part div:nth-child(2)
+{
+    border-bottom: 1px solid #0000001f;
 }
