@@ -52,8 +52,7 @@ function App() {
 
   const [selectedcountrydata,setselectedcountrydata] = useState([])
 
-  useEffect( ()=>{
-      async function fetchdata() {
+  useEffect( async ()=>{
         await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
         .then( response => {
             setallcountriesdata(response.data)
@@ -62,7 +61,6 @@ function App() {
               options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
             })
         })
-      }
   },[])
 
 
@@ -122,13 +120,14 @@ function App() {
 
 
   const getselectedcountrychange = async (selectedOption )  => {
-    await axios.get(`https://corona.lmao.ninja/v2/countries/Italy?yesterday&strict&query%20`,headers)
+    await axios.get(`https://corona.lmao.ninja/v2/countries/${selectedOption.value}?yesterday&strict&query%20`,headers)
     .then(response => {
       setselectedcountrydata(response.data)
+      console.log("data: ",response.data);
     })
   }
 
-  
+
   return (
     <div className="App">
       <div className="app-upper-part">
