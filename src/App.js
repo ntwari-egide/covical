@@ -50,9 +50,14 @@ function App() {
 
   const [allcountriesdata,setallcountriesdata] = useState([])
 
-  const [selectedcountrydata,setselectedcountrydata] = useState([])
+  const [selectedcountrydata,setselectedcountrydata] = useState({})
 
-  useEffect(()=>{
+  useEffect( async ()=>{
+        await axios.get(`https://corona.lmao.ninja/v2/countries/Rwanda?yesterday&strict&query%20`,headers)
+        .then(response => {
+          setselectedcountrydata(response.data)
+        })
+
         axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
         .then( response => {
             setallcountriesdata(response.data)
@@ -155,7 +160,7 @@ function App() {
 
           <div className="mt-12">
             <div className="country-brief-data"> 
-                <h1 className="text-center text-xl pt-8">2,188,881</h1>
+                <h1 className="text-center text-xl pt-8">{selectedcountrydata.cases}</h1>
                 <p className="text-center text-sm pt-8">Cumulatively</p>
             </div>
 
@@ -163,36 +168,36 @@ function App() {
               <div>
                 <h1>11,270</h1>
                 <p className="small-text">Tests</p>
-                <p className="small-numbers">2,188,881</p>
+                <p className="small-numbers">{selectedcountrydata.testes}</p>
+              </div>
+
+              <div>
+                <h1>{selectedcountrydata.todayCases}</h1>
+                <p className="small-text">Positive cases</p>
+                <p className="small-numbers">{selectedcountrydata.cases}</p>
+              </div>
+
+              <div>
+                <h1>{selectedcountrydata.critical}</h1>
+                <p className="small-text">Hospitalized</p>
+                <p className="small-numbers">{selectedcountrydata.active}</p>
+              </div>
+
+              <div>
+                <h1>{selectedcountrydata.recovered}</h1>
+                <p className="small-text">Recovered</p>
+                <p className="small-numbers">{selectedcountrydata.recovered}</p>
+              </div>
+
+              <div>
+                <h1>{selectedcountrydata.todayDeaths}</h1>
+                <p className="small-text">Death</p>
+                <p className="small-numbers">{selectedcountrydata.deaths}</p>
               </div>
 
               <div>
                 <h1>11,270</h1>
-                <p className="small-text">Tests</p>
-                <p className="small-numbers">2,188,881</p>
-              </div>
-
-              <div>
-                <h1>11,270</h1>
-                <p className="small-text">Tests</p>
-                <p className="small-numbers">2,188,881</p>
-              </div>
-
-              <div>
-                <h1>11,270</h1>
-                <p className="small-text">Tests</p>
-                <p className="small-numbers">2,188,881</p>
-              </div>
-
-              <div>
-                <h1>11,270</h1>
-                <p className="small-text">Tests</p>
-                <p className="small-numbers">2,188,881</p>
-              </div>
-
-              <div>
-                <h1>11,270</h1>
-                <p className="small-text">Tests</p>
+                <p className="small-text">Vaccinated</p>
                 <p className="small-numbers">2,188,881</p>
               </div>
             </div>
