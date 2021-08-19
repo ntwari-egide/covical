@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
-import { render } from "react-dom";
 import Select, { components } from "react-select";
+import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel";
 
 const options = [
   { value: "England", label: "England", icon: "https://www.countryflags.io/be/shiny/64.png" },
