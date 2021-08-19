@@ -82,11 +82,41 @@ function App() {
                 <p className="text-center text-sm pt-8">Cumulatively</p>
             </div>
 
-            <div className="country-detailed-data p-4 flex justify-between "> 
+            <div className="country-detailed-data p-4 grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-2 gap-2 xs:grid-cols-2 gap-2 justify-between "> 
               <div>
                 <h1>11,270</h1>
-                <span>Tests</span>
-                <p>2,188,881</p>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
+              </div>
+
+              <div>
+                <h1>11,270</h1>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
+              </div>
+
+              <div>
+                <h1>11,270</h1>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
+              </div>
+
+              <div>
+                <h1>11,270</h1>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
+              </div>
+
+              <div>
+                <h1>11,270</h1>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
+              </div>
+
+              <div>
+                <h1>11,270</h1>
+                <p className="small-text">Tests</p>
+                <p className="small-numbers">2,188,881</p>
               </div>
             </div>
 

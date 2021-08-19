@@ -56,7 +56,7 @@
 .country-detailed-data{
   width: 76%;
   margin: auto;
-  height: 20.6vh;
+  /* height: 20.6vh; */
   background: #ffffff;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -77,14 +77,31 @@
     font-weight: 500;
 }
 
+.country-brief-data div{
+  /* width: 16.6%; */
+}
+
 .country-detailed-data h1{
-
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 30px;
+  color: #2FC8B8;
 }
 
-.country-detailed-data span{
-  
+.country-detailed-data .small-text{
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    padding: 6px;
 }
 
-.country-detailed-data p{
-  
+.country-detailed-data .small-numbers{
+  font-size: 12px;
+    color: #888888;
+    font-family: 'Roboto';
+    font-weight: 300;
+    text-align: center;
+    padding: 6px;
 }
