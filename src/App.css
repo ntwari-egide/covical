@@ -221,7 +221,7 @@
 }
 
 .footer{
-  height: 52vh;
+  height: 64vh;
   background: #1E776E;
   border-bottom: 10px solid #0b3833;
 }
@@ -240,9 +240,15 @@
   font-weight: 700;
 }
 
-.footer h3{
+.footer p,.footer a{
   font-family: 'Roboto';
   font-weight: 300;
   color: white;
   font-size: 13px;
+  text-align: center;
+}
+
+.footer a{
+  border-bottom: 1px solid white;
+  text-align: center;
 }

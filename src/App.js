@@ -223,7 +223,16 @@ function App() {
               <div className="footer">
                   <h1 className="text-center pt-16 font-bold">REACH ME</h1>
                   <h2 className="text-center mt-8 font-bold">Email</h2>
-                  <h3 className="text-center font-bold">ntwariegide2@gmail.com</h3>
+                  <p className="text-center font-bold">ntwariegide2@gmail.com</p>
+
+                  <h2 className="text-center mt-8 font-bold">Phone</h2>
+                  <p className="text-center font-bold">call:  +250 780 964 4307,+250 788881955</p>
+                  <p className="text-center font-bold">whatsap: +250 727 509 011</p>
+
+                  <h2 className="text-center mt-8 font-bold">Profile</h2>
+                  <p> <a className="text-center font-bold" href="https://www.linkedin.com/in/ntwari-egide-93b53218a/">ntwari egide,linked in profile</a> </p>
+                  <p> <a className="text-center font-bold" href="https://www.linkedin.com/in/ntwari-egide-93b53218a/">ntwari egide,my cv</a> </p>
+                  
               </div>
       </div>
     </div>
