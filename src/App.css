@@ -105,3 +105,9 @@
     text-align: center;
     padding: 6px;
 }
+
+.per-continent-title{
+  font-family: 'Bebas Neue';
+    font-size: 33px;
+    font-weight: 500;
+}

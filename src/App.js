@@ -122,6 +122,8 @@ function App() {
 
           </div>
 
+          <h1 className="per-continent-title text-center font-bold mt-28">PER CONTINENTS</h1>
+
       </div>
     </div>
   );
