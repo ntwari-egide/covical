@@ -116,6 +116,10 @@ function App() {
     }
   };
 
+
+  const getSelectedCaseIdChange = async (selectedOption )  => {
+    console.log("data: ",selectedOption.value);  
+  }
   return (
     <div className="App">
       <div className="app-upper-part">
