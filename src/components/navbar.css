@@ -1,8 +1,6 @@
-.logo-name{
-    width: 174px;
-    height: 42px;
-    background: transparent url('../assets/images/C O V I C A L C.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
+.logo-img{
+    width: 54%;
+    height: 100%;
 }
 
 .contact-button{
@@ -11,6 +9,4 @@
     font-family: 'Roboto';
     padding: 7px 30px;
     font-size: 12px;
-    position: absolute;
-    right: 10px;
 }
