@@ -47,23 +47,15 @@ function App() {
     'Access-Control-Allow-Origin': '*'
   }
 
-  const initialData = {
-    allcountriesdata: [],
-    countrydata: [],
-    error: null,
-  };
-
   const [allcontinentsdata,setallcontinentsdata] = useState()
 
   const [allcountritesdata,setallcountritesdata] = useState([])
-
-  const [data, dispatch] = React.useReducer(dataReducer, initialData);
 
   useEffect(()=>{
 
       axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
       .then( response => {
-        dispatch({ type: "SET_ALL_COUNTRIES",allcountritesdata: response.data})
+          setallcountritesdata(response.data)
       })
 
       allcountritesdata.map(countrydata => {
