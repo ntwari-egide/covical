@@ -78,10 +78,16 @@ function App() {
 
           <div className="mt-12">
             <div className="country-brief-data"> 
-
+                <h1 className="text-center text-xl pt-8">2,188,881</h1>
+                <p className="text-center text-sm pt-8">Cumulatively</p>
             </div>
 
-            <div className="country-detailed-data"> 
+            <div className="country-detailed-data p-4 flex justify-between "> 
+              <div>
+                <h1>11,270</h1>
+                <span>Tests</span>
+                <p>2,188,881</p>
+              </div>
             </div>
 
           </div>

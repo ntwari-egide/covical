@@ -63,3 +63,28 @@
   box-shadow: 0 3px 16px #0000001f;
 }
 
+
+.country-brief-data h1{
+  color: #2FC8B8;
+    font-size: 50px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.country-brief-data p{
+  color: #FFFFFF;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.country-detailed-data h1{
+
+}
+
+.country-detailed-data span{
+  
+}
+
+.country-detailed-data p{
+  
+}
