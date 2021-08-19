@@ -58,6 +58,11 @@ function App() {
           setselectedcountrydata(response.data)
         })
 
+        await axios.get(`https://corona.lmao.ninja/v2/continents?yesterday&sort`,headers)
+        .then(response => {
+          setallcontinentsdata(response.data)
+        })
+
         axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
         .then( response => {
             setallcountriesdata(response.data)
