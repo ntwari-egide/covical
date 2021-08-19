@@ -1,5 +1,5 @@
 .app-upper-part{
-  height: 50vh;
+  height: 60vh;
   background-color: #2FC8B8;
 }
 
@@ -20,4 +20,46 @@
   background: white;
   width: 40%;
   margin: auto;
+  border-radius: 5px;
 }
+
+.choose-date{
+  font-size: 12px;
+    font-weight: 700;
+    font-family: 'Roboto';
+    padding-left: 24px;
+    outline: none;
+}
+
+.search-form button{
+  background: #1e776e;
+  color: white;
+  font-size: 12px;
+  padding: 0 16px;
+  border-radius: 0;
+  border: 1px solid white;
+  font-family: 'Roboto';
+  font-weight: 700;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.country-brief-data{
+  width: 76%;
+  margin: auto;
+  height: 20.6vh;
+  background: #1e776e;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.country-detailed-data{
+  width: 76%;
+  margin: auto;
+  height: 20.6vh;
+  background: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 3px 16px #0000001f;
+}
+

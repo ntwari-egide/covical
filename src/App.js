@@ -9,7 +9,20 @@ const options = [
   { value: "Germany", label: "Germany", icon: "https://www.countryflags.io/be/shiny/64.png" }
 ];
 
-const { Option } = components;
+const { Option,Control } = components;
+
+const IconControl = props => (
+  <Control {...props}>
+    <div  className="flex"> 
+      <img
+        src={props.data.icon}
+        style={{ width: 16 }}
+        alt={props.data.label}
+      />
+      <p className ="ml-2">{props.data.label}</p>
+    </div>
+  </Control>
+)
 const IconOption = props => (
   <Option {...props} >
 
@@ -27,7 +40,7 @@ const IconOption = props => (
 function App() {
 
   const colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: 'white',width: '150px',fontFamily: 'Roboto',border: '1px solid hsl(0deg 0% 70% / 38%)',fontSize: '13px',fontWeight: 900 }),
+    control: styles => ({ ...styles, backgroundColor: 'white',minWidth: '200px',fontFamily: 'Roboto',border: '1px solid hsl(0deg 0% 70% / 38%)',fontSize: '13px',fontWeight: 900,outline: 'none'}),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       return {
         ...styles,
@@ -50,13 +63,27 @@ function App() {
 
           {/* search form */}
 
-          <div className="flex search-form">
-          <Select
-          defaultValue={options[0]}
-          options={options}
-          components={{ Option: IconOption }} 
-          styles = {colourStyles}
-          />
+          <div className="flex justify-between search-form">
+            <Select
+            defaultValue={options[0]}
+            options={options}
+            components={{ Option: IconOption }} 
+            styles = {colourStyles}
+            />
+
+            <input type="date" className="choose-date" />
+            
+            <button>SUBMIT</button>
+          </div>
+
+          <div className="mt-12">
+            <div className="country-brief-data"> 
+
+            </div>
+
+            <div className="country-detailed-data"> 
+            </div>
+
           </div>
 
       </div>
