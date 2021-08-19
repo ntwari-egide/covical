@@ -8,8 +8,7 @@ import {useState,useEffect} from "react"
 import axios from "axios"
 
 const options = [
-  { value: "England", label: "England", icon: "https://www.countryflags.io/be/shiny/64.png" },
-  { value: "Germany", label: "Germany", icon: "https://www.countryflags.io/be/shiny/64.png" }
+  { value: "Rwanda", label: "Rwanda", icon: "https://www.countryflags.io/be/rwanda/64.png" }
 ];
 
 const { Option,Control } = components;
@@ -51,15 +50,14 @@ function App() {
 
   const [allcountritesdata,setallcountritesdata] = useState([])
 
-  useEffect(()=>{
-
-      axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
+  useEffect( async ()=>{
+      await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
       .then( response => {
           setallcountritesdata(response.data)
-      })
 
-      allcountritesdata.map(countrydata => {
-          options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
+          response.data.map(countrydata => {
+            options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
+          })
       })
   },[])
 
@@ -87,7 +85,7 @@ function App() {
     description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
 }]
 
-    const responsive = {
+  const responsive = {
       superLargeDesktop: {
       breakpoint: { max: 1500, min: 3000 },
       items: 2.5
