@@ -1,8 +1,16 @@
 .logo-name{
-    top: 37px;
-    left: 150px;
     width: 174px;
     height: 42px;
-    background: transparent url('../../assets/images/C\ O\ V\ I\ C\ A\ L\ C.png') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/images/C O V I C A L C.png') 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+
+.contact-button{
+    background: #1E776E 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    padding: 7px 30px;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
 }
