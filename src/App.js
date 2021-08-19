@@ -189,22 +189,30 @@ function App() {
                             <h2 className="text-center mt-4">Total deaths: 20,300</h2>
                           </div>
                           <div>
-                            <h1 className="text-center mt-4">619</h1>
-                            <h4 className="text-center">New deaths</h4>
-                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                            <h1 className="text-center mt-4">23,200</h1>
+                            <h4 className="text-center">Newly recovered</h4>
+                            <h2 className="text-center mt-4">Total recovered: 20,300</h2>
                           </div>
                           <div>
-                            <h1 className="text-center mt-4">619</h1>
-                            <h4 className="text-center">New deaths</h4>
-                            <h2 className="text-center mt-4">Total deaths: 20,300</h2>
+                            <h1 className="text-center mt-4">50,009</h1>
+                            <h4 className="text-center">New vaccinated</h4>
+                            <h2 className="text-center mt-4">Total vaccinated: 20,300</h2>
                           </div>
                         </div>                      
                     </div>                                     
                   </div>
                 )}
                 </Carousel>
-
               <br />
+              <div className="h-full grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+                  <div className="my-image">
+
+                  </div>
+
+                  <div className="my-portifolio">
+                    
+                  </div>
+              </div>
       </div>
     </div>
   );

@@ -184,3 +184,11 @@
 {
     border-bottom: 1px solid #0000001f;
 }
+
+.my-image{
+  background: url('../assets/images/NTWARI');
+}
+
+.my-portifolio{
+  background: #EEF6F6;
+}
