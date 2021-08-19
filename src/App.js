@@ -8,7 +8,7 @@ import {useState,useEffect} from "react"
 import axios from "axios"
 
 const options = [
-  { value: "Rwanda", label: "Rwanda", icon: "https://www.countryflags.io/be/rwanda/64.png" }
+  { value: "Rwanda", label: "Rwanda", icon: "https://disease.sh/assets/img/flags/rw.png" }
 ];
 
 const { Option,Control } = components;
@@ -31,7 +31,7 @@ const IconOption = props => (
     <div  className="flex"> 
       <img
         src={props.data.icon}
-        style={{ width: 16 }}
+        style={{ width: 20 }}
         alt={props.data.label}
       />
       <p className ="ml-2">{props.data.label}</p>
@@ -52,13 +52,13 @@ function App() {
 
   const [selectedcountrydata,setselectedcountrydata] = useState([])
 
-  useEffect( async ()=>{
-        await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
+  useEffect(()=>{
+        axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
         .then( response => {
             setallcountriesdata(response.data)
 
             response.data.map(countrydata => {
-              options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
+              options.push({ value: countrydata.country, label: countrydata.country, icon: countrydata.countryInfo.flag })
             })
         })
   },[])
@@ -123,7 +123,6 @@ function App() {
     await axios.get(`https://corona.lmao.ninja/v2/countries/${selectedOption.value}?yesterday&strict&query%20`,headers)
     .then(response => {
       setselectedcountrydata(response.data)
-      console.log("data: ",response.data);
     })
   }
 
