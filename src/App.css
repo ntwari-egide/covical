@@ -9,11 +9,15 @@
   font-weight: 400;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-title{
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: 12px;
+}
+
+.search-form{
+  height: 38px;
+  background: white;
+  width: 40%;
+  margin: auto;
 }
