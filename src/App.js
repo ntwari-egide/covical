@@ -52,7 +52,7 @@ function App() {
 
   const [selecteddate,setselecteddate] = useState("")
 
-  const [datenotselected,setdatenotselected] = useState(true)
+  const [datenotselected,setdatenotselected] = useState(false)
 
   const [selectedcountry,setselectedcountry] = useState("")
 
@@ -124,11 +124,10 @@ function App() {
     e.preventDefault()
 
     /* validating forms */
-    
-    console.log("date: ",selecteddate);
 
     if(selecteddate === "") {
-      alert("date is not choosen")
+      setdatenotselected(true)
+      alert("date is not choosen, choose date and try again")
     }
     else if(selecteddate !== ""){
       setdatenotselected(false)
