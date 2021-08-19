@@ -228,7 +228,21 @@
 
 .footer h1{
   font-family: 'Bebas Neue';
-    font-size: 27px;
-    font-weight: 500;
-    color: #FFFFFF;
+  font-size: 27px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.footer h2{
+  color: white;
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer h3{
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: white;
+  font-size: 13px;
 }

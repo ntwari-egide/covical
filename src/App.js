@@ -222,6 +222,8 @@ function App() {
 
               <div className="footer">
                   <h1 className="text-center pt-16 font-bold">REACH ME</h1>
+                  <h2 className="text-center mt-8 font-bold">Email</h2>
+                  <h3 className="text-center font-bold">ntwariegide2@gmail.com</h3>
               </div>
       </div>
     </div>
