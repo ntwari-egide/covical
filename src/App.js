@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
-import { render } from "react-dom";
 import Select, { components } from "react-select";
+import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel";
 
 const options = [
   { value: "England", label: "England", icon: "https://www.countryflags.io/be/shiny/64.png" },
@@ -38,6 +39,48 @@ const IconOption = props => (
 );
 
 function App() {
+
+  const services = [
+    {
+        title: 'Case Management',
+        description: "Yombi help you to add and assign cases, level of completion of case,working on the assigned cases,graphic visualization of level."
+  
+    },
+    {
+        title: 'Daily Task Management',
+        description: " With Yombi you can organize your daily work clearly to minimize time wastage. Yombi helps to add and complete daily todos list corresponding comment after completetion"
+    },
+    {
+        title: 'Messaging service',
+        description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
+    },
+    {
+      title: 'Messaging service',
+      description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
+  },
+  {
+    title: 'Messaging service',
+    description: "With Yombi messaging service, we link up the law firm members in interactive conversation, sharing documents in messaging app."
+}]
+
+    const responsive = {
+      superLargeDesktop: {
+      breakpoint: { max: 1500, min: 3000 },
+      items: 2.3
+      },
+      desktop: {
+      breakpoint: { max: 1500, min: 500 },
+      items: 3
+      },
+      tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1
+      },
+      mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+      }
+  };
 
   const colourStyles = {
     control: styles => ({ ...styles, backgroundColor: 'white',minWidth: '200px',fontFamily: 'Roboto',border: '1px solid hsl(0deg 0% 70% / 38%)',fontSize: '13px',fontWeight: 900,outline: 'none'}),
@@ -124,6 +167,25 @@ function App() {
 
           <h1 className="text-center mt-28 per-continent-title">PER CONTINENTS</h1>
 
+          <Carousel  
+              className="mt-16 mb-16 pt-4 pb-4" 
+              responsive={responsive}
+              keyBoardControl={true}
+              draggable={true}
+              swipeable = {true}>
+                  {services.map((services)=>
+                    <div className="rounded-md ml-12 continent-container">
+                    <div className="grid grid-cols-2">
+                        <div className="left-part p-2">
+                        </div>
+                        <div className="right-part p-2">
+                        </div>                      
+                    </div>                                     
+                  </div>
+                )}
+                </Carousel>
+
+              <br />
       </div>
     </div>
   );

@@ -111,3 +111,12 @@
     font-size: 33px;
     font-weight: 500;
 }
+
+.continent-container{
+  box-shadow: 0 3px 16px #0000001F;
+}
+
+.continent-container .right-part{
+  background-color: #2FC8B8;
+  height: 44vh;
+}
