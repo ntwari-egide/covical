@@ -225,7 +225,9 @@ function App() {
               keyBoardControl={true}
               draggable={true}
               swipeable = {true}>
-                  <ListOfContinentDataComponents allcontinentsdata={allcontinentsdata} />
+                  {allcontinentsdata.map((continentdata) =>
+                  <ContinentDataComponent key={continentdata.continent} {...continentdata} />
+                )}
                 </Carousel>
               <br />
               <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
@@ -261,13 +263,6 @@ function App() {
       </div>
     </div>
   );
-}
-
-
-const ListOfContinentDataComponents = ({allcontinentsdata}) => {
-  return allcontinentsdata.map(continentdata => 
-    <ContinentDataComponent key={continentdata.continent} {...continentdata}/>  
-  )
 }
 
 
