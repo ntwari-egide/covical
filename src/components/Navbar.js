@@ -12,7 +12,7 @@ export default function Navbar({ fixed }) {
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <img className="logo-img" src={LogoImage} />
+            <img className="logo-img" alt="" src={LogoImage} />
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
