@@ -204,14 +204,24 @@ function App() {
                 )}
                 </Carousel>
               <br />
-              <div className="h-full grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+              <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
                   <div className="my-image">
-
                   </div>
 
                   <div className="my-portifolio">
-                    
+                    <h1 className="ml-16 mt-24">NTWARI EGIDE</h1>
+                    <p className="ml-16 mt-4 skills">I am a software developer who is skilled in working in Big Groups using Agile methodology and devops, expert in programming , passionate in coding , best UI & UX Designer with best upcoming trends. <br /> <br />
+                    My front end skills: React Js,Vue Js, Angular Js, Nuxt Js,Php - Laravel. <br />
+                    Best achievement ever: React Js Developer @ <a className="font-light link" href="https://yombi.rw/">yombi</a> <br />
+                    My github: <a className="font-light link" href="https://github.com/ntwari-egide">ntwari egide github</a>
+                    </p>
+
+                    <p className="ml-16 mt-8 date">19 August 2021</p>
                   </div>
+              </div>
+
+              <div className="footer">
+                  <h1 className="text-center pt-16 font-bold">REACH ME</h1>
               </div>
       </div>
     </div>

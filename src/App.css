@@ -186,9 +186,49 @@
 }
 
 .my-image{
-  background: url('../assets/images/NTWARI');
+  background: url('./assets/images/NTWARI Egide.jpg');
+  background-size: cover;
+  height: 84vh;
 }
 
 .my-portifolio{
   background: #EEF6F6;
+  height: 84vh;
+}
+
+.my-portifolio h1{
+  font-family: 'Bebas Neue';
+  font-size: 41px;
+}
+
+.my-portifolio .skills{
+  font-size: 15px;
+  text-align: justify;
+  padding-right: 72px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.my-portifolio .date{
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 200;
+}
+
+.my-portifolio .link{
+  border-bottom: 1px solid #00000061;
+  padding-bottom: 5px;
+}
+
+.footer{
+  height: 52vh;
+  background: #1E776E;
+  border-bottom: 10px solid #0b3833;
+}
+
+.footer h1{
+  font-family: 'Bebas Neue';
+    font-size: 27px;
+    font-weight: 500;
+    color: #FFFFFF;
 }
