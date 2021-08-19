@@ -48,13 +48,15 @@ function App() {
 
   const [allcontinentsdata,setallcontinentsdata] = useState()
 
-  const [allcountrydata,setallcountrydata] = useState([])
+  const [allcountriesdata,setallcountriesdata] = useState([])
+
+  const [selectedcountrydata,setselectedcountrydata] = useState([])
 
   useEffect( ()=>{
       async function fetchdata() {
         await axios.get(`https://corona.lmao.ninja/v2/countries?yesterday&sort`,headers)
         .then( response => {
-            setallcountritesdata(response.data)
+            setallcountriesdata(response.data)
 
             response.data.map(countrydata => {
               options.push({ value: countrydata.country, label: countrydata.country, icon: `https://www.countryflags.io/be/${countrydata.country.toLowerCase}/64.png` })
@@ -122,7 +124,7 @@ function App() {
   const getselectedcountrychange = async (selectedOption )  => {
     await axios.get(`https://corona.lmao.ninja/v2/countries/Italy?yesterday&strict&query%20`,headers)
     .then(response => {
-      setallcountrydata(response.data)
+      setselectedcountrydata(response.data)
     })
   }
   return (
