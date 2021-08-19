@@ -119,4 +119,11 @@
 .continent-container .right-part{
   background-color: #2FC8B8;
   height: 44vh;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.continent-container .left-part{
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }

@@ -66,11 +66,11 @@ function App() {
     const responsive = {
       superLargeDesktop: {
       breakpoint: { max: 1500, min: 3000 },
-      items: 2.3
+      items: 2.5
       },
       desktop: {
       breakpoint: { max: 1500, min: 500 },
-      items: 3
+      items: 2.5
       },
       tablet: {
       breakpoint: { max: 1024, min: 464 },
