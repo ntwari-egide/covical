@@ -225,35 +225,7 @@ function App() {
               keyBoardControl={true}
               draggable={true}
               swipeable = {true}>
-                  {allcontinentsdata.map((continentdata) =>
-                    <div className="rounded-md ml-12 continent-container">
-                    <div className="grid grid-cols-2">
-                        <div className="left-part p-2">
-                          <h1 className="text-center font-bold mt-6">{continentdata.continent}</h1>
-                          <h2 className="text-center mt-14">{continentdata.todayCases}</h2>
-                          <h3 className="text-center">New cases</h3>
-                          <h4 className="text-center mt-24">All cases: {continentdata.cases}</h4>
-                        </div>
-                        <div className="right-part">
-                          <div>
-                            <h1 className="text-center mt-4">{continentdata.todayDeaths}</h1>
-                            <h4 className="text-center">New deaths</h4>
-                            <h2 className="text-center mt-4">Total deaths: {continentdata.deaths}0</h2>
-                          </div>
-                          <div>
-                            <h1 className="text-center mt-4">{continentdata.critical}</h1>
-                            <h4 className="text-center">Newly recovered</h4>
-                            <h2 className="text-center mt-4">Total recovered: {continentdata.recovered}</h2>
-                          </div>
-                          <div>
-                            <h1 className="text-center mt-4">50,009</h1>
-                            <h4 className="text-center">New vaccinated</h4>
-                            <h2 className="text-center mt-4">Total vaccinated: 20,300</h2>
-                          </div>
-                        </div>                      
-                    </div>                                     
-                  </div>
-                )}
+                  <ListOfContinentDataComponents allcontinentsdata={allcontinentsdata} />
                 </Carousel>
               <br />
               <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
@@ -289,6 +261,44 @@ function App() {
       </div>
     </div>
   );
+}
+
+
+const ListOfContinentDataComponents = ({allcontinentsdata}) => {
+  return allcontinentsdata.map(continentdata => 
+    <ContinentDataComponent key={continentdata.continent} {...continentdata}/>  
+  )
+}
+
+
+const ContinentDataComponent = ({...continentdata}) =>{
+  return <div className="rounded-md ml-12 continent-container">
+  <div className="grid grid-cols-2">
+      <div className="left-part p-2">
+        <h1 className="text-center font-bold mt-6">{continentdata.continent}</h1>
+        <h2 className="text-center mt-14">{continentdata.todayCases}</h2>
+        <h3 className="text-center">New cases</h3>
+        <h4 className="text-center mt-24">All cases: {continentdata.cases}</h4>
+      </div>
+      <div className="right-part">
+        <div>
+          <h1 className="text-center mt-4">{continentdata.todayDeaths}</h1>
+          <h4 className="text-center">New deaths</h4>
+          <h2 className="text-center mt-4">Total deaths: {continentdata.deaths}0</h2>
+        </div>
+        <div>
+          <h1 className="text-center mt-4">{continentdata.critical}</h1>
+          <h4 className="text-center">Newly recovered</h4>
+          <h2 className="text-center mt-4">Total recovered: {continentdata.recovered}</h2>
+        </div>
+        <div>
+          <h1 className="text-center mt-4">50,009</h1>
+          <h4 className="text-center">New vaccinated</h4>
+          <h2 className="text-center mt-4">Total vaccinated: 20,300</h2>
+        </div>
+      </div>                      
+  </div>                                     
+</div>
 }
 
 export default App;
