@@ -1,13 +1,16 @@
 # Step 1 -  copying our working director and installing all required dependencies
+
 FROM node:10-alpine as build-step
 
-WORKDIR /src
+RUN mkdir /app
 
-COPY package.json /src
+WORKDIR /app
+
+COPY package.json /app
 
 RUN npm install
 
-COPY . /src
+COPY . /app
 
 RUN npm run build
 
