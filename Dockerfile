@@ -1,7 +1,5 @@
-# Step 1
+# Step 1 -  copying our working director and installing all required dependencies
 FROM node:10-alpine as build-step
-
-RUN mkdir /src
 
 WORKDIR /src
 
