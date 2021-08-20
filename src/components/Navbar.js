@@ -1,3 +1,7 @@
+/**
+ * @author: ntwari egide
+ * @description Navbar component
+ */
 import React from "react";
 
 import "./navbar.css"

@@ -1,3 +1,8 @@
+/**
+ * @author: ntwari egide
+ * @description App component
+ */
+
 import logo from './logo.svg';
 
 import './App.css';
