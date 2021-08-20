@@ -141,11 +141,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="app-upper-part">
-          
-          {/* app navigation bar */}
+      {/* app navigation bar */}
 
-          <Navbar />
+      <Navbar />
+      <div className="app-upper-part">
           <h1 className="updates-title text-center text-white font-bold">UPDATES</h1>
           <p className="search-title text-sm text-center text-white font-sm mb-4">Search a country</p>
 
