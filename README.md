@@ -41,3 +41,8 @@ Run:
 
 ### `docker build -t dockerizing:dev .`
 
+# Bonus
+app is deployed and running on vercel:
+
+[Covicalc Live](http://covical.vercel.app/)
+
