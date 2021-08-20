@@ -280,6 +280,11 @@
     display: flow-root;
 }
 
+.continent-container{
+  margin-left: 22px;
+  margin-right: 25px;
+}
+
 .select-country{
 
 }
