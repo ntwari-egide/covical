@@ -153,6 +153,8 @@
   color: #888888;
 }
 
+
+
 .continent-container .right-part h1{
   font-family: 'Roboto';
     font-size: 21px;
@@ -188,12 +190,13 @@
 .my-image{
   background: url('./assets/images/NTWARI Egide.jpg');
   background-size: cover;
-  height: 84vh;
+  height: 97vh;
+  background-position: center;
 }
 
 .my-portifolio{
   background: #EEF6F6;
-  height: 84vh;
+  height: 97vh;
 }
 
 .my-portifolio h1{
@@ -251,4 +254,34 @@
 .footer a{
   border-bottom: 1px solid white;
   text-align: center;
+}
+
+.select-country{
+  width: 50%;
+}
+
+@media only screen and (max-width: 620px) {
+  .search-form {
+    height: 38px;
+    background: white;
+    width: 87%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.country-detailed-data {
+    width: 76%;
+    margin: auto;
+    /* height: 20.6vh; */
+    background: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 3px 16px #0000001f;
+    display: flow-root;
+}
+
+.select-country{
+
+}
+
 }

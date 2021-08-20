@@ -100,7 +100,7 @@ function App() {
   };
 
   const colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: 'white',minWidth: '200px',fontFamily: 'Roboto',border: '1px solid hsl(0deg 0% 70% / 38%)',fontSize: '13px',fontWeight: 900,outline: 'none'}),
+    control: styles => ({ ...styles, backgroundColor: 'white',minWidth: '',fontFamily: 'Roboto',border: '1px solid hsl(0deg 0% 70% / 38%)',fontSize: '13px',fontWeight: 900,outline: 'none'}),
     option: (styles, { data, isDisabled, isFocused, isSelected }) => {
       return {
         ...styles,
@@ -158,6 +158,7 @@ function App() {
             components={{ Option: IconOption }} 
             styles = {colourStyles}
             onChange = {getselectedcountrychange}
+            className="select-country"
             />
 
             {datenotselected ? 
