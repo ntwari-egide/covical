@@ -31,6 +31,9 @@ To deploy covicalc, run:
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 # Running dockerized environment
+
+Run ` docker-compose up` command to start the container. The React development server will be running inside the container and will be watching the src folder.
+
 Inside your app directory
 Let's run the docker build command which will help us to create Docker Image with React App.
 
