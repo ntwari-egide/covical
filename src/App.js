@@ -120,8 +120,7 @@ function App() {
     setselecteddate(e.target.value)
   }
 
-  const handleformsubmission = async (e) => {
-    e.preventDefault()
+  const handleformsubmission = (e) => {
 
     /* validating forms */
 
@@ -131,11 +130,10 @@ function App() {
     }
     else if(selecteddate !== ""){
       setdatenotselected(false)
-    }
-    else{
-      await axios.get(`https://corona.lmao.ninja/v2/countries/${selectedcountry}?${selecteddate}&strict&query%20`,headers)
+
+      axios.get(`https://corona.lmao.ninja/v2/countries/${selectedcountry}?${selecteddate}&strict&query%20`,headers)
       .then(response => {
-        setselectedcountrydata(response.data)
+          setselectedcountrydata(response.data)
       })
     }
   }
